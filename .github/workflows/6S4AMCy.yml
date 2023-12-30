@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
   schedule:
-    - cron: "59 * * * *"
+    - cron: "0 * * * *"
 
 jobs:
   sync-fork:
@@ -18,17 +18,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Check Upstream Changes
+      - name: Set up Git
         run: |
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git config --global user.name "Your Name"
           git remote add upstream https://github.com/roothide/bootstrap
           git fetch upstream
-          # Check if there are changes in the upstream main branch
-          if [ "$(git rev-parse HEAD)" = "$(git rev-parse upstream/main)" ]; then
-            echo "Already up-to-date with upstream repository."
-            exit 0
-          fi
           git checkout main
-          git merge --allow-unrelated-histories upstream/main
+          git merge upstream/main
 
   build:
     name: Build Bootstrap
