@@ -28,7 +28,7 @@ jobs:
             exit 0
           fi
           git checkout main
-          git merge upstream/main
+          git merge --allow-unrelated-histories upstream/main
 
   build:
     name: Build Bootstrap
