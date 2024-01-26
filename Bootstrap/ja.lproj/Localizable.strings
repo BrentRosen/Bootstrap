@@ -20,9 +20,7 @@
 "Warning" = "警告";
 "Applying" = "適用中";
 "Cancel" = "キャンセル";
-"Update" = "アップデート";
 "Bootstrapping" = "Bootstrapping";
-"Uninstall" = "アンインストール";
 "Uninstalling" = "アンインストール中";
 "bootstrap uninstalled" = "bootstrapはアンインストールされました";
 
@@ -43,7 +41,7 @@
 "bootstrap not installed" = "bootstrapはインストールされていません";
 "system bootstrapped" = "システムはbootstrapされました";
 "system not bootstrapped" = "システムはbootstrapされていません";
-"bootstrap server check successful" = "bootstrapサーバーにチェックに成功しました";
+"bootstrap server check successful" = "bootstrapサーバーのチェックに成功しました";
 
 "It seems that you have the Filza app installed, which may be detected as jailbroken. You can enable Tweak for it to hide it." = "Filzaがインストールされているため、脱獄として検知される可能性があります。Tweakを有効にすると、隠すことができます。";
 
